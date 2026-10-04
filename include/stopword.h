@@ -5,11 +5,11 @@
 
 typedef struct stopword_list stopword_list;
 
-Status stopword_create(stopword_list **out);
-void stopword_free(stopword_list **list);
-Status stopword_add(stopword_list *list, const char *word);
-Status stopword_remove(stopword_list *list, const char *word);
+Status stopword_create(stopword_list **stopwords);
+void stopword_free(stopword_list **stopwords);
+Status stopword_add(stopword_list *stopwords, const char *word);
+Status stopword_remove(stopword_list *stopwords, const char *word);
 int stopword_contains(const char *word, void *stopwords);
-Status stopword_foreach(stopword_list *list, Status (*visit)(const char *word, void *ctx), void *ctx);
+Status stopword_foreach(const stopword_list *stopwords, Status (*visit)(const char *word, void *ctx), void *ctx);
 
 #endif

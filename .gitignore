@@ -13,3 +13,6 @@ bookindex
 *.swp
 *~
 .DS_Store
+
+# 对话
+进度.md
