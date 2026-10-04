@@ -1,6 +1,8 @@
 #ifndef EXTRACT_H
 #define EXTRACT_H
 
+#define MAX_TITLE_LENGTH 200
+
 #include "status.h"
 
 Status title_check(const char *title);
