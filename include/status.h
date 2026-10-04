@@ -13,6 +13,7 @@ typedef enum {
     ERROR_NOT_FOUND = -7,
     ERROR_EXISTS = -8,
     ERROR_IO = -9,
+    ERROR_VISIT = -10,
 } Status;
 
 const char *status_message(Status status);
